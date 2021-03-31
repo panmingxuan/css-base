@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      /* 无法扩展，违反关注点分离原则 */
+      /* 可以覆盖外部样式表 */
+      p {
+        color: black;
+      }
+      /* id选择器 */
+      #first {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+    <!-- 引入css一致化配置文件 -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <p id="first">Lorem ipsum dolor sit amet</p>
+    <p>Lorem ipsum dolor sit amet</p>
+  </body>
+</html>

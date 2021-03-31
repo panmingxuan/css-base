@@ -1,0 +1,16 @@
+/* 继承: 指一些css规则可以从父级元素继承下来,一定情况下可以减少代码量
+   不需要可以去记住可以被继承的css规则，
+   但大体上，和文字内容有关的属性都能被继承
+*/
+
+p {
+  color: dodgerblue;
+  /* 不会被继承的规则 */
+  border: 1px solid black;
+}
+strong {
+  /* 取消继承 */
+  color: initial;
+  /* 强制继承 */
+  border: inherit;
+}

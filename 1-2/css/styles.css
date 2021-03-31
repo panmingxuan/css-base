@@ -1,0 +1,122 @@
+body {
+  margin: 10px;
+}
+
+/* id选择器 */
+
+#products {
+}
+
+/* 关系选择器 */
+
+/* 
+关系选择器的代码也很脆弱，
+dom结构改变就会影响效果 
+
+关系选择器的效率不如基本选择器
+执行顺序为从右到左，
+首先选择所有的通配子元素，
+然后再去进行判断和前面基本选择器的关系
+（浏览器读取和执行渲染的差异，虽然可能感受不到）
+
+
+*/
+/* 
+> 代表选择#products下的子元素
++ 代表选择#products后的元素
+~ 代表选择所有#products后的元素
+*/
+#products + p {
+  color: orange;
+}
+
+/* 类选择器 */
+
+.product {
+}
+
+/* 属性选择器，相对薄弱，因为属性是精准匹配 */
+
+a[target='_blank'] {
+}
+a[href="https://google.com"]
+{
+}
+/* 使用通配机制匹配属性 */
+/* * 代表属性中存在某些 */
+a[href*='google'] {
+}
+/* ^ 代表属性以什么为开头 */
+a[href^='https'] {
+}
+/* $ 代表属性以什么为结尾 */
+a[href$='.com'] {
+}
+
+/* 属性选择器也可以进行混合使用  */
+a[href^='https'][href$='.com'] {
+}
+
+/* 伪类选择器 */
+
+/* 
+first-child 应用于第一个子元素，
+first-of-type 应用于每一个不同类型标签第一次出现的地方 
+
+last-child 应用于最后一个子元素
+last-of-type 应用于每一个不同类型标签最后一次出现的地方
+*/
+article p:first-child {
+  font-size: 140%;
+  font-style: italic;
+}
+/* 
+nth-child相当于函数，
+odd 为选中单数行 
+even 为选中双数行
+3n 为每隔三个选项（公式）
+*/
+ul li:nth-child(odd) {
+  color: deeppink;
+}
+/*
+a标签专用的伪类：
+visited 点击后
+link 点击前
+*/
+a:visited,
+a:link {
+  color: dodgerblue;
+}
+/*
+非专用伪类
+hover 鼠标悬停
+focus 聚焦在元素上时
+*/
+a:hover,
+a:focus {
+  color: deeppink;
+}
+
+/*伪元素选择器 :代表伪类，::代表伪元素*/
+/*
+first-letter 首字母
+first-line 首行
+selection 选择后高亮色
+before 在选择的元素之前
+after 在选择的元素之后
+*/
+
+p::first-letter {
+  font-size: 140%;
+  font-weight: bold;
+}
+p::selection {
+  color: deeppink;
+}
+
+p::before {
+  content: '...';
+  /* 可以将伪元素转为块元素 */
+  display: block;
+}

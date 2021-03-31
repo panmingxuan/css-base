@@ -1,0 +1,15 @@
+/* css中的颜色:
+  可以使用颜色名、RGB值、HSL值、十六进制值
+  rgb函数（red,green,blue) 三色值
+  rbga函数（red,green,blue,alpha）三色值，透明度(0-1之间的小数)0表示完全透明，1表示完全不透明
+*/
+.box {
+  width: 200px;
+  height: 200px;
+  /* 使用rgb函数 */
+  /* background-color: rgb(219, 165, 15); */
+  /* 使用rgba函数 */
+  /* background-color: rgba(219, 165, 15,0.5); */
+  /* 使用十六进制 */
+  background-color: #dba50f;
+}

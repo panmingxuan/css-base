@@ -1,0 +1,42 @@
+/* 选择器优先级 */
+/* 选择器特征性（Selector Specificity (Weight) 权重 ）：
+   如果不同的规则对应同一个元素，浏览器会显示特征性最高（权重）的
+   优先级排序：
+   1. id选择器
+   2. 类选择器和属性选择器
+   3. 元素选择器
+   小技巧：vscode可以将鼠标放在选择器上，
+   查看当前选择器的权重 Selector Specificity: (0, 0, 1) 从右到左分别是 元素选择器，类选择器或属性选择器，id选择器
+   id选择器会被下方的同名id选择器复写
+*/
+
+h1 {
+  /* 
+  可以使用important进行权重提升，important会忽略其它所有的css规则 
+  important会使代码变得混乱且难以维护，应当尽量减少使用
+  */
+  /* color: dodgerblue !important; */
+  color: dodgerblue;
+}
+
+.highlight {
+  color: deeppink;
+}
+
+#products {
+  color: green;
+}
+
+#products {
+  color: brown;
+}
+/*
+  常规提升权重的方法，使用选择器累加增加权重的值
+*/
+.highlight#products {
+  color: dodgerblue;
+}
+/* or */
+h1#products {
+  color: dodgerblue;
+}
