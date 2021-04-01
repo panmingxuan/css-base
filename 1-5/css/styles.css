@@ -1,0 +1,24 @@
+/* 边框
+   boder是简写属性，默认是四边框同时设置，border可以被单独设置某一边
+   border: 边框粗细(px),边框样式(solid(实线),dotted(点线),dashed(短线)),边框颜色
+   border-width 设置所有边框的宽度 上右下左 顺时针方向设置
+   border-radius 设置边框的圆滑角度，宽高一致的情况下，设置100%就会变成圆
+   
+   css形状可以参考：https://css-tricks.com/the-shapes-of-css/
+
+   box-shadow: x轴偏移量,y轴偏移量,模糊距离,阴影颜色
+   text-shadow: x轴偏移量,y轴偏移量,模糊距离,阴影颜色
+
+ */
+.box {
+  width: 200px;
+  height: 200px;
+  background: coral;
+  /* border: 10px dashed royalblue;
+  border-radius: 100%; */
+  box-shadow: 0 0 30px gray;
+}
+h1 {
+  color: white;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}

@@ -11,5 +11,20 @@
   /* 使用rgba函数 */
   /* background-color: rgba(219, 165, 15,0.5); */
   /* 使用十六进制 */
-  background-color: #dba50f;
+  /* background-color: #dba50f; */
+  /* 使用渐变色
+     线性渐变函数生成线性渐变
+     linear-gradient(渐变方向，默认从上到下,color1 结束点,color2 结束点,color3)渐变方向可选择指向，也可以选择角度
+     径向渐变函数
+     radial-gradient(渐变是否是正圆 at 渐变圆心位置,color1,color2)
+     在线生成css渐变代码：https://cssgradient.io/
+     
+     注意：在应对浏览器兼容情况下应对渐变进行兼容性配置
+
+   */
+  /* background: linear-gradient(to bottom right, dodgerblue, yellow); */
+  /* background: linear-gradient(45deg, dodgerblue, yellow, tomato); */
+  /* 兼容性操作 */
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 98%);
 }
